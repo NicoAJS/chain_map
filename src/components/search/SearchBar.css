@@ -1,0 +1,29 @@
+.search-map {
+    margin-bottom: 10px;
+  }
+  .input-container {
+    position: relative;
+    width: 95%;
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 3px;
+  }
+  .form-control {
+    width: calc(100% - 40px);
+    border: none;
+    box-sizing: border-box;
+  }
+  .form-control:focus {
+    outline: none;
+  }
+  .clear-btn {
+    position: absolute;
+    top: 50%;
+    right: 0.625rem;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+  }

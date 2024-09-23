@@ -1,0 +1,113 @@
+.map-page {
+  display: flex;
+  justify-content: center;
+  padding: 0.3125rem;
+  height: 70vh;
+}
+.search-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.title {
+  font-size: 1.375rem;
+  padding: 0.5rem 1rem;
+  color: #272727;
+  font-family: Fraunces, serif;
+  font-weight: bold;
+}
+.main-icon {
+  font-size: 1.7rem;
+  color: rgb(110, 110, 110);
+  padding: 0.625rem;
+  margin-top: 0.3125rem;
+}
+.custom-marker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-top-left-radius: 60%;
+  border-top-right-radius: 70%;
+  border-bottom-right-radius: 70%;
+  transform: rotate(-45deg);
+  border: 1px solid rgb(29, 30, 31);
+  width: 2rem;
+  height: 2rem;
+  background-color: whitesmoke;
+}
+
+.custom-marker svg {
+  width: 90%;
+  height: 90%;
+  transform: rotate(45deg);
+  padding: 4px;
+}
+.custom-marker-container {
+  position: absolute;
+  transform: translate(-50%, -100%);
+  will-change: transform;
+}
+
+.venueName {
+  font-size: 1.2rem;
+  font-weight: 500;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.venueName:hover {
+  color: rgb(30, 144, 255);
+}
+
+.direction-container {
+  width: 5rem;
+  margin-top: 0.3125rem;
+  background-color: rgb(30, 144, 255);
+  color: white;
+  border-radius: 1rem;
+  padding: 0.3125rem;
+  font-size: 0.625rem;
+  font-weight: 500;
+}
+
+.direction-icon {
+  padding-right: 0.625rem;
+}
+
+.direction-container a {
+  color: white;
+  font-size: 0.875rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .search-product p {
+    font-size: 1.2rem;
+  }
+  .venueName {
+    font-size: 14px;
+  }
+  .direction-container {
+    font-size: 0.625rem;
+    font-weight: 100;
+    padding: 0.1875rem;
+  }
+}
+.gm-ui-hover-effect {
+  display: none !important;
+}
+
+@media (min-width: 700px) and (max-width: 1399px) {
+  .title {
+    font-size: 1.625rem;
+    padding: 0.625rem 1.25rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .title {
+    font-size: 2rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
