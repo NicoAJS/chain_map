@@ -3,7 +3,7 @@ import { GoogleMap, Marker } from "@react-google-maps/api";
 import { VenueLocation } from "types"; // Ensure this path is correct
 
 interface ChainVenuesMapProps {
-  venues: VenueLocation[]; // Keep the venues prop here
+  venues: VenueLocation[];
   padding?: number; 
 }
 
@@ -22,7 +22,9 @@ const ChainVenuesMap: React.FC<ChainVenuesMapProps> = ({ venues, padding = 20 })
   const fitMapToBounds = () => {
     if (mapRef.current && venues.length > 0) {
       const bounds = new window.google.maps.LatLngBounds();
+      console.log(`Number of venues: ${venues.length}`);
       venues.forEach((venue) => {
+        console.log("Venue:", venue); // Log each venue
         if (venue.location.lat && venue.location.lng) {
           bounds.extend(new window.google.maps.LatLng(venue.location.lat, venue.location.lng));
         }
@@ -52,6 +54,7 @@ const ChainVenuesMap: React.FC<ChainVenuesMapProps> = ({ venues, padding = 20 })
   };
 
   useEffect(() => {
+    console.log("Venues prop:", venues); // Log venues on change
     if (mapRef.current) {
       fitMapToBounds();
     }
