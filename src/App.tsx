@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useLoadScript, Libraries } from "@react-google-maps/api";
-import ChainVenuesMap from "./components/Chains/ChainVenuesMap";
+import ChainVenuesMap from './components/Chains/ChainVenuesMap';
 import { VenueLocation } from "./types";
-import { faBuilding } from "@fortawesome/free-solid-svg-icons";
+
 
 const libraries: Libraries = ["places", "geometry"];
 
@@ -60,6 +60,7 @@ function App() {
     <div className="app-container">
       {isLoaded && locations.length > 0 ? (
         <ChainVenuesMap venues={locations} />
+
       ) : (
         <div>Loading map...</div>
       )}
